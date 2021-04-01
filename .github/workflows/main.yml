@@ -1,9 +1,6 @@
 name: CI
 
-on:
-  push:
-    branches: [ main, alibekov-murad-lab1 ]
-  pull_request:
+on: [ push ]
 
 env:
   CTEST_EXT_COLOR_OUTPUT: TRUE
