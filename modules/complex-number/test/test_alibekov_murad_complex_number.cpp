@@ -13,7 +13,8 @@ typedef testing::TestWithParam<std::tuple<double, double> >
 typedef testing::TestWithParam<std::tuple<double, double, double, double> >
         Alibekov_Murad_ComplexNumberTest_4_Parametrized;
 
-TEST(Alibekov_Murad_ComplexNumberTest, Dereference_Pointer_Returns_Equal_Variable) {
+TEST(Alibekov_Murad_ComplexNumberTest,
+        Dereference_Pointer_Returns_Equal_Variable) {
     double re = 10.;
     double im = 12.;
     ComplexNumber z(re, im);
@@ -24,7 +25,8 @@ TEST(Alibekov_Murad_ComplexNumberTest, Dereference_Pointer_Returns_Equal_Variabl
     ASSERT_EQ(z, z_deref);
 }
 
-TEST_P(Alibekov_Murad_ComplexNumberTest_2_Parametrized, Can_Set_Values_To_ComplexNumber_Pointer) {
+TEST_P(Alibekov_Murad_ComplexNumberTest_2_Parametrized,
+        Can_Set_Values_To_ComplexNumber_Pointer) {
     double re = std::get<0>(GetParam());
     double im = std::get<1>(GetParam());
     ComplexNumber z;
@@ -38,7 +40,8 @@ TEST_P(Alibekov_Murad_ComplexNumberTest_2_Parametrized, Can_Set_Values_To_Comple
     ASSERT_EQ(z, *z_ptr);
 }
 
-TEST_P(Alibekov_Murad_ComplexNumberTest_4_Parametrized, Can_Use_Pair_Of_Complex_Numbers) {
+TEST_P(Alibekov_Murad_ComplexNumberTest_4_Parametrized,
+        Can_Use_Pair_Of_Complex_Numbers) {
     double re_1 = std::get<0>(GetParam());
     double im_1 = std::get<1>(GetParam());
     ComplexNumber z_1(re_1, im_1);
@@ -53,7 +56,8 @@ TEST_P(Alibekov_Murad_ComplexNumberTest_4_Parametrized, Can_Use_Pair_Of_Complex_
     ASSERT_EQ(z_2, pair_of_complex_numbers.second);
 }
 
-TEST_P(Alibekov_Murad_ComplexNumberTest_4_Parametrized, Addition_With_Using_ComplexNumber_Pointer) {
+TEST_P(Alibekov_Murad_ComplexNumberTest_4_Parametrized,
+        Addition_With_Using_ComplexNumber_Pointer) {
     double re_1 = std::get<0>(GetParam());
     double im_1 = std::get<1>(GetParam());
     ComplexNumber z_1(re_1, im_1);
@@ -66,7 +70,8 @@ TEST_P(Alibekov_Murad_ComplexNumberTest_4_Parametrized, Addition_With_Using_Comp
     ASSERT_EQ(z_1 + z_2, z_ptr->operator+(z_2));
 }
 
-TEST_P(Alibekov_Murad_ComplexNumberTest_4_Parametrized, Substraction_With_Using_ComplexNumber_Pointer) {
+TEST_P(Alibekov_Murad_ComplexNumberTest_4_Parametrized,
+        Substraction_With_Using_ComplexNumber_Pointer) {
     double re_1 = std::get<0>(GetParam());
     double im_1 = std::get<1>(GetParam());
     ComplexNumber z_1(re_1, im_1);
@@ -79,7 +84,8 @@ TEST_P(Alibekov_Murad_ComplexNumberTest_4_Parametrized, Substraction_With_Using_
     ASSERT_EQ(z_1 - z_2, z_ptr->operator-(z_2));
 }
 
-TEST_P(Alibekov_Murad_ComplexNumberTest_4_Parametrized, Multiplication_With_Using_ComplexNumber_Pointer) {
+TEST_P(Alibekov_Murad_ComplexNumberTest_4_Parametrized,
+        Multiplication_With_Using_ComplexNumber_Pointer) {
     double re_1 = std::get<0>(GetParam());
     double im_1 = std::get<1>(GetParam());
     ComplexNumber z_1(re_1, im_1);
