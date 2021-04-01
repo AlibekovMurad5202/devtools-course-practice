@@ -18,7 +18,7 @@ TEST(Alibekov_Murad_ComplexNumberTest,
     double re = 10.;
     double im = 12.;
     ComplexNumber z(re, im);
-    auto z_ptr = std::make_unique<ComplexNumber>(z);
+    std::unique_ptr<ComplexNumber> z_ptr(new ComplexNumber(re, im));
 
     ComplexNumber z_deref = *z_ptr;
 
@@ -30,7 +30,7 @@ TEST_P(Alibekov_Murad_ComplexNumberTest_2_Parametrized,
     double re = std::get<0>(GetParam());
     double im = std::get<1>(GetParam());
     ComplexNumber z;
-    auto z_ptr = std::make_unique<ComplexNumber>();
+    std::unique_ptr<ComplexNumber> z_ptr(new ComplexNumber());
 
     z.setRe(re);
     z.setIm(im);
@@ -61,7 +61,7 @@ TEST_P(Alibekov_Murad_ComplexNumberTest_4_Parametrized,
     double re_1 = std::get<0>(GetParam());
     double im_1 = std::get<1>(GetParam());
     ComplexNumber z_1(re_1, im_1);
-    auto z_ptr = std::make_unique<ComplexNumber>(z_1);
+    std::unique_ptr<ComplexNumber> z_ptr(new ComplexNumber(re_1, im_1));
 
     double re_2 = std::get<2>(GetParam());
     double im_2 = std::get<3>(GetParam());
@@ -75,7 +75,7 @@ TEST_P(Alibekov_Murad_ComplexNumberTest_4_Parametrized,
     double re_1 = std::get<0>(GetParam());
     double im_1 = std::get<1>(GetParam());
     ComplexNumber z_1(re_1, im_1);
-    auto z_ptr = std::make_unique<ComplexNumber>(z_1);
+    std::unique_ptr<ComplexNumber> z_ptr(new ComplexNumber(re_1, im_1));
 
     double re_2 = std::get<2>(GetParam());
     double im_2 = std::get<3>(GetParam());
@@ -89,7 +89,7 @@ TEST_P(Alibekov_Murad_ComplexNumberTest_4_Parametrized,
     double re_1 = std::get<0>(GetParam());
     double im_1 = std::get<1>(GetParam());
     ComplexNumber z_1(re_1, im_1);
-    auto z_ptr = std::make_unique<ComplexNumber>(z_1);
+    std::unique_ptr<ComplexNumber> z_ptr(new ComplexNumber(re_1, im_1));
 
     double re_2 = std::get<2>(GetParam());
     double im_2 = std::get<3>(GetParam());
