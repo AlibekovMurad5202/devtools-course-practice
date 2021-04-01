@@ -5,6 +5,7 @@
 #include <tuple>
 #include <utility>
 #include <memory>
+
 #include "include/complex_number.h"
 
 typedef testing::TestWithParam<std::tuple<double, double> >
