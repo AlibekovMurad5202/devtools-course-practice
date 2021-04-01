@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, alibekov-murad-lab1 ]
   pull_request:
 
 env:
