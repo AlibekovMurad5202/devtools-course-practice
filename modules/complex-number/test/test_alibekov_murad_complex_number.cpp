@@ -13,18 +13,6 @@ typedef testing::TestWithParam<std::tuple<double, double> >
 typedef testing::TestWithParam<std::tuple<double, double, double, double> >
         Alibekov_Murad_ComplexNumberTest_4_Parametrized;
 
-TEST(Alibekov_Murad_ComplexNumberTest,
-        Dereference_Pointer_Returns_Equal_Variable) {
-    double re = 10.;
-    double im = 12.;
-    ComplexNumber z(re, im);
-    std::unique_ptr<ComplexNumber> z_ptr(new ComplexNumber(re, im));
-
-    ComplexNumber z_deref = *z_ptr;
-
-    ASSERT_EQ(z, z_deref);
-}
-
 TEST_P(Alibekov_Murad_ComplexNumberTest_2_Parametrized,
         Can_Set_Values_To_ComplexNumber_Pointer) {
     double re = std::get<0>(GetParam());
