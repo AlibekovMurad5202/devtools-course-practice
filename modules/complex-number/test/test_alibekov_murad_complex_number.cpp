@@ -1,7 +1,6 @@
 // Copyright 2021 Alibekov Murad
 
 #include <gtest/gtest.h>
-
 #include <tuple>
 #include <utility>
 #include <memory>
