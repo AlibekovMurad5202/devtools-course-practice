@@ -6,7 +6,7 @@
 
 TEST(Alibekov_Murad_Polygon_Tests, Throw_If_Polygon_Without_Points) {
     // Arrange
-    Points2D polygon;
+    Points2D polygon = {};
 
     // Assert
     ASSERT_ANY_THROW(Polygon::PolygonArea(polygon));
