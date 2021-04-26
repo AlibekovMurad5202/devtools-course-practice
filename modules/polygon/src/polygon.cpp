@@ -2,7 +2,7 @@
 
 #include "include/polygon.h"
 
-double PolygonArea(const Points2D& polygon) {
+double Polygon::PolygonArea(const Points2D& polygon) {
     double area = 0;
     int N = polygon.size();
 
