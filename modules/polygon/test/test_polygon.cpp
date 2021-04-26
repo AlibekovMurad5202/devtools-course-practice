@@ -20,7 +20,7 @@ TEST(Alibekov_Murad_Polygon_Tests, Area_Of_Point_Is_0) {
     double area = Polygon::PolygonArea(point);
 
     // Assert
-    ASSERT_DOUBLE_EQ(area, 0.);
+    ASSERT_DOUBLE_EQ(0., area);
 }
 
 TEST(Alibekov_Murad_Polygon_Tests, Area_Of_Line_Is_0) {
@@ -31,7 +31,7 @@ TEST(Alibekov_Murad_Polygon_Tests, Area_Of_Line_Is_0) {
     double area = Polygon::PolygonArea(line);
 
     // Assert
-    ASSERT_DOUBLE_EQ(area, 0.);
+    ASSERT_DOUBLE_EQ(0., area);
 }
 
 TEST(Alibekov_Murad_Polygon_Tests, Area_Of_Triangle) {
@@ -42,7 +42,7 @@ TEST(Alibekov_Murad_Polygon_Tests, Area_Of_Triangle) {
     double area = Polygon::PolygonArea(triangle);
 
     // Assert
-    ASSERT_DOUBLE_EQ(area, 1.625);
+    ASSERT_DOUBLE_EQ(1.625, area);
 }
 
 TEST(Alibekov_Murad_Polygon_Tests, Area_Of_Square) {
@@ -53,7 +53,7 @@ TEST(Alibekov_Murad_Polygon_Tests, Area_Of_Square) {
     double area = Polygon::PolygonArea(square);
 
     // Assert
-    ASSERT_DOUBLE_EQ(area, 1.);
+    ASSERT_DOUBLE_EQ(1., area);
 }
 
 TEST(Alibekov_Murad_Polygon_Tests, Area_Of_Hexagon) {
@@ -65,10 +65,10 @@ TEST(Alibekov_Murad_Polygon_Tests, Area_Of_Hexagon) {
     double area = Polygon::PolygonArea(hexagon);
 
     // Assert
-    ASSERT_DOUBLE_EQ(area, 5.);
+    ASSERT_DOUBLE_EQ(5., area);
 }
 
-TEST(Alibekov_Murad_Polygon_Tests, Area_Of_Nonconvex_Pentagon) {
+TEST(Alibekov_Murad_Polygon_Tests, Area_Of_Non_Convex_Pentagon) {
     // Arrange
     Points2D nonconvex_pentagon = {{3, 4}, {5, 11}, {12, 8}, {9, 5}, {5, 6}};
 
@@ -76,5 +76,5 @@ TEST(Alibekov_Murad_Polygon_Tests, Area_Of_Nonconvex_Pentagon) {
     double area = Polygon::PolygonArea(nonconvex_pentagon);
 
     // Assert
-    ASSERT_DOUBLE_EQ(area, 30.);
+    ASSERT_DOUBLE_EQ(30., area);
 }
