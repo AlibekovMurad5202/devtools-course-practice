@@ -59,7 +59,7 @@ TEST(Alibekov_Murad_Polygon_Tests, Area_Of_Square) {
 TEST(Alibekov_Murad_Polygon_Tests, Area_Of_Hexagon) {
     // Arrange
     Points2D hexagon = {{-2, 0}, {-1, 1}, {0.5, 1},
-        {1.5, 0}, {0.5, -1}, {1, -1}};
+        {1.5, 0}, {0.5, -1}, {-1, -1}};
 
     // Act
     double area = Polygon::PolygonArea(hexagon);
