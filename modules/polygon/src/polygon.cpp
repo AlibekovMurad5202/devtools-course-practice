@@ -13,12 +13,12 @@ double PolygonArea(const Points2D& polygon) {
         return 0;
 
     for (int i = 0; i < N - 1; i++) {
-        area += polygon[i].first * polygon[i+1].second
-              - polygon[i+1].first * polygon[i].second;
+        area += polygon[i].first * polygon[i + 1].second
+              - polygon[i + 1].first * polygon[i].second;
     }
 
-    area += polygon[N-1].first * polygon[0].second
-          - polygon[0].first * polygon[N-1].second;
+    area += polygon[N - 1].first * polygon[0].second
+          - polygon[0].first * polygon[N - 1].second;
 
     return fabs(area) / 2;
 }

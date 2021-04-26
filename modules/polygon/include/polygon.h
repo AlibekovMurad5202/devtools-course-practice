@@ -10,6 +10,7 @@
 
 using Point2D = std::pair<double, double>;
 using Points2D = std::vector<Point2D>;
+
 namespace Polygon {
     double PolygonArea(const Points2D& polygon);
 }
