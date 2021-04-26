@@ -3,14 +3,14 @@
 #include "include/polygon.h"
 
 double Polygon::PolygonArea(const Points2D& polygon) {
-    double area = 0;
+    double area = 0.;
     int N = polygon.size();
 
     if (N == 0)
         std::runtime_error("[ERROR]: Polygon without points");
 
     if ((N == 1) || (N == 2))
-        return 0;
+        return area;
 
     for (int i = 0; i < N - 1; i++) {
         area += polygon[i].first * polygon[i + 1].second
