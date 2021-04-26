@@ -15,7 +15,7 @@ TEST(Alibekov_Murad_Polygon_Tests, Throw_If_Polygon_Without_Points) {
 TEST(Alibekov_Murad_Polygon_Tests, Area_Of_Point_Is_0) {
     // Arrange
     Points2D point = {{1, 1}};
-    
+
     // Act
     double area = Polygon::PolygonArea(polygon);
 
@@ -58,7 +58,7 @@ TEST(Alibekov_Murad_Polygon_Tests, Area_Of_Square) {
 
 TEST(Alibekov_Murad_Polygon_Tests, Area_Of_Hexagon) {
     // Arrange
-    Points2D hexagon = {{-2, 0}, {-1, 1}, {0.5, 1}, 
+    Points2D hexagon = {{-2, 0}, {-1, 1}, {0.5, 1},
         {1.5, 0}, {0.5, -1}, {1, -1}};
 
     // Act
