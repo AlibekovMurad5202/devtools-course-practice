@@ -3,10 +3,10 @@
 #ifndef MODULES_POLYGON_INCLUDE_POLYGON_H_
 #define MODULES_POLYGON_INCLUDE_POLYGON_H_
 
-#include <utility>
-#include <vector>
 #include <cmath>
 #include <stdexcept>
+#include <utility>
+#include <vector>
 
 using Point2D = std::pair<double, double>;
 using Points2D = std::vector<Point2D>;
