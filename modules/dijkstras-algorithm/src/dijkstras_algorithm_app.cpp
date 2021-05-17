@@ -10,6 +10,8 @@
 #include <string>
 #include <sstream>
 
+#include <limits>
+
 Application::Application() : message_("") {}
 
 void Application::help(const char* appname, const char* message) {
@@ -62,7 +64,7 @@ std::string Application::operator()(int argc, const char** argv) {
             throw std::string("Index out of range!");
         }
         for (int i = 3; i < args.N * args.N + 3; i++) {
-            if (argv[i] == "inf")
+            if (strcmp(argv[i], "inf") == 0)
                 args.values.push_back(inf);
             else args.values.push_back(parseDouble(argv[i]));
         }
@@ -74,7 +76,7 @@ std::string Application::operator()(int argc, const char** argv) {
     std::vector<double> result = GraphAlgorithms::dijkstras_algorithm(args.values, args.N, args.source_vertex);
     
     std::ostringstream stream;
-    for (int i = 0; i < result.size(); i++) {
+    for (int i = 0; i < (int)result.size(); i++) {
         stream << "Result: [" << result[i] << " ";
     }
     stream << "]\n";
