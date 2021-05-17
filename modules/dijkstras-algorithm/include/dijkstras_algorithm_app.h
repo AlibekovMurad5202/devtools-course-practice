@@ -17,6 +17,7 @@ class Application {
     std::string message_;
     typedef struct {
         int N;
+        int source_vertex;
         std::vector<double> values;
     } Arguments;
 };
