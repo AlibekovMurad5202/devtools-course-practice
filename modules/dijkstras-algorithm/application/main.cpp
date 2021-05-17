@@ -1,7 +1,7 @@
 // Copyright 2021 Alibekov Murad
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string>
 
 #include "include/dijkstras_algorithm_app.h"

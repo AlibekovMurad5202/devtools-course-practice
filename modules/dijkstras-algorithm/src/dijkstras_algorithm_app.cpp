@@ -3,14 +3,14 @@
 #include "include/dijkstras_algorithm.h"
 #include "include/dijkstras_algorithm_app.h"
 
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 #include <string.h>
-#include <string>
-#include <sstream>
 
 #include <limits>
+#include <sstream>
+#include <string>
 #include <vector>
 
 Application::Application() : message_("") {}
@@ -29,9 +29,9 @@ int parseInt(const char* arg) {
 void Application::help(const char* appname, const char* message) {
     message_ =
         std::string(message) +
-          "This is a graph's shortest paths finder application.\n\n" +
-          "Please provide arguments in the following format:\n\n" +
-          "  $ " + appname + " <N> <source vertex> ... (N * N numbers)\n\n " +
+          "This is a graph's shortest paths finder application.\n\n" \
+          "Please provide arguments in the following format:\n\n" \
+          "  $ " + appname + " <N> <source vertex> ... (N * N numbers)\n\n " \
           "Where all arguments are double-precision numbers or word 'inf'.\n";
 }
 
