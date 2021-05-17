@@ -43,7 +43,6 @@ bool Application::validateNumberOfArguments(int argc, const char** argv) {
         try {
             int N = parseInt(argv[1]);
             if (argc != N * N + 3) {
-                
                 help(argv[0], "ERROR: Should be N * N + 3 arguments.\n");
                 return false;
             }
