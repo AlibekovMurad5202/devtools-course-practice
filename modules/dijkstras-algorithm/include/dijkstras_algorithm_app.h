@@ -19,7 +19,7 @@ class Application {
     typedef struct {
         int N;
         int source_vertex;
-        std::vector<double> values;
+        std::vector<double> graph;
     } Arguments;
 };
 
