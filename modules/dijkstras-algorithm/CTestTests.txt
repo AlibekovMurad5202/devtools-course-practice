@@ -56,6 +56,20 @@ set_tests_properties (${prefix}_cannot_Work_With_Not_Enough_Data PROPERTIES
 
 
 add_test(
+    NAME ${prefix}_cannot_Work_With_Wrong_Number_Format
+    COMMAND ${APPLICATION} 5 0 
+        inf 10  30  50  Hello!
+        inf inf inf inf inf
+        inf inf inf inf 10
+        inf 40  20  inf inf
+        10  inf 10  30  inf
+)
+set_tests_properties (${prefix}_cannot_Work_With_Wrong_Number_Format PROPERTIES
+    PASS_REGULAR_EXPRESSION "ERROR: Wrong number format!"
+    LABELS "${MODULE}")
+
+
+add_test(
     NAME ${prefix}_cannot_Work_With_Index_Out_Of_Range
     COMMAND ${APPLICATION} 5 7 
         inf inf 7   3   9
