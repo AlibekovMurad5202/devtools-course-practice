@@ -67,7 +67,7 @@ std::string Application::operator()(int argc, const char** argv) {
         for (int i = 3; i < args.N * args.N + 3; i++) {
             if (strcmp(argv[i], "inf") == 0)
                 args.values.push_back(inf);
-            else 
+            else
                 args.values.push_back(parseDouble(argv[i]));
         }
     }
