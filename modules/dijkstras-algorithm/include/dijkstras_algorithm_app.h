@@ -4,6 +4,7 @@
 #define MODULES_DIJKSTRAS_ALGORITHM_INCLUDE_DIJKSTRAS_ALGORITHM_APP_H_
 
 #include <string>
+#include <vector>
 
 class Application {
  public:

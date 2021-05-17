@@ -1,0 +1,26 @@
+#############################################
+##### Testing
+#############################################
+
+set(prefix "${MODULE}")
+
+add_test(
+    NAME ${prefix}_can_run
+    COMMAND ${APPLICATION}
+)
+set_tests_properties (${prefix}_can_run PROPERTIES
+    PASS_REGULAR_EXPRESSION ".*"
+    LABELS "${MODULE}")
+
+add_test(
+    NAME ${prefix}_can_print_help_without_arguments
+    COMMAND ${APPLICATION}
+)
+set_tests_properties (${prefix}_can_print_help_without_arguments PROPERTIES
+    PASS_REGULAR_EXPRESSION "This is a graph's shortest paths finder application."
+    LABELS "${MODULE}")
+
+add_test(
+    NAME ${prefix}_cannot_work_when_N_without_values
+    COMMAND ${APPLICATION} 10
+)
