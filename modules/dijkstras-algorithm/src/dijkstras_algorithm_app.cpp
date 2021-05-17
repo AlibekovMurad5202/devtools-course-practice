@@ -11,6 +11,7 @@
 #include <sstream>
 
 #include <limits>
+#include <vector>
 
 Application::Application() : message_("") {}
 
@@ -20,9 +21,9 @@ void Application::help(const char* appname, const char* message) {
           "This is a graph's shortest paths finder application.\n\n" +
           "Please provide arguments in the following format:\n\n"+
 
-          "  $ " + appname + " <N> <source vertex> ... (N * N numbers) " + "\n\n" +
+          "  $ " + appname + " <N> <source vertex> ... (N * N numbers)\n\n " +
 
-          "Where all arguments are double-precision numbers or keyword 'inf'.\n";
+          "Where all arguments are double-precision numbers or word 'inf'.\n";
 }
 
 bool Application::validateNumberOfArguments(int argc, const char** argv) {
@@ -66,17 +67,19 @@ std::string Application::operator()(int argc, const char** argv) {
         for (int i = 3; i < args.N * args.N + 3; i++) {
             if (strcmp(argv[i], "inf") == 0)
                 args.values.push_back(inf);
-            else args.values.push_back(parseDouble(argv[i]));
+            else 
+                args.values.push_back(parseDouble(argv[i]));
         }
     }
     catch(std::string& str) {
         return str;
     }
 
-    std::vector<double> result = GraphAlgorithms::dijkstras_algorithm(args.values, args.N, args.source_vertex);
-    
+    std::vector<double> result = GraphAlgorithms::dijkstras_algorithm
+        (args.values, args.N, args.source_vertex);
+
     std::ostringstream stream;
-    for (int i = 0; i < (int)result.size(); i++) {
+    for (int i = 0; i < std::static_cast<int>(result.size()); i++) {
         stream << "Result: [" << result[i] << " ";
     }
     stream << "]\n";
