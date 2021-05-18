@@ -8,7 +8,7 @@ env:
 
 jobs:
   run_linux:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     name: Linux / Build and Test
     strategy:
       matrix:
