@@ -16,11 +16,11 @@ class Application {
     void help(const char* appname, const char* message = "");
     bool validateNumberOfArguments(int argc, const char** argv);
     std::string message_;
-    typedef struct {
+    struct Arguments {
         int N;
         int source_vertex;
         std::vector<double> graph;
-    } Arguments;
+    };
 };
 
 #endif  // MODULES_DIJKSTRAS_ALGORITHM_INCLUDE_DIJKSTRAS_ALGORITHM_APP_H_
